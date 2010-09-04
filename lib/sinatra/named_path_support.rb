@@ -27,7 +27,7 @@ module Sinatra
 
   module UrlBuilder
     SPLAT = %r{(\*)}
-    NAMED_PARAMETER = %r{/?(:\S+?)(?:[^a-zA-Z0-9]|$)} 
+    NAMED_PARAMETER = %r{/?(:\S+?)(?:[/\-\.]|$)}
     REGEXP_GROUP = %r{\(.+?\)}
     
     def with(*values)
